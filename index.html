@@ -32,7 +32,67 @@
 <main>
 <section id="about"><div class="split"><div><div class="kicker">The artist</div><h2>About Sharon Rose</h2><p class="lead">Sharon Rose is a singer, songwriter, and musician from Thunder Bay, Ontario, whose music blends folk, pop, jazz, and musical theatre influences. Through heartfelt lyrics exploring self-love, nature, joy, and human connection, Sharon Rose creates music that reflects on love, friendship, aging, depression, and the courage to live fully and authentically as you are.</p><p>Her musical journey began at just three years old, singing in churches, before developing into a passion for songwriting and live performance. By age sixteen, she was performing original music throughout Thunder Bay and went on to record her first album as a young artist.</p><p>An active presence in Thunder Bay’s arts community, Sharon Rose has performed in numerous concerts, community events, and theatrical productions. Her recent stage credits include Magnus Theatre’s Lies and Legends: The Musical Stories of Harry Chapin and Stan Rogers’ A Matter of Heart, as well as Magnus Theatre in Education’s 10x10 Play Festival.</p><p>Alongside her performing career, Sharon Rose has dedicated over two decades to music and drama education, helping thousands of young people discover the joy of creative expression through music and theatre.</p><p>Now returning to the recording studio with a renewed focus on her original songwriting, Sharon Rose is preparing to release her second album in fall 2027, produced by Jean-Paul De Roover at Blueprints Studio — a new chapter in a lifelong musical journey.</p><a class="cta" href="#press" style="border-color:#28575d;color:#225159">Artist &amp; Press Information</a></div><img alt="Sharon Rose professional portrait" src="portrait.jpg"/></div></section>
 <section class="dark" id="performances"><div class="section-head"><div><div class="kicker">On stage</div><h2>Upcoming Performances=</h2></div></div><div class="event-note"><p style="margin:0">Performance dates, venues, times, gig posters and ticket links will appear here once confirmed.</p></div></section>
-<section id="photos"><div class="kicker">Through the lens</div><h2>Photos &amp; Performances</h2><div class="gallery"><figure><img alt="Sharon Rose formal teal portrait" src="portrait.jpg"/><figcaption>Artist portrait</figcaption></figure><figure><img alt="Sharon Rose performing on acoustic guitar" src="live-guitar.jpg"/><figcaption>Live guitar</figcaption></figure><figure><img alt="Sharon Rose at the piano" src="live-piano.jpg"/><figcaption>At the piano</figcaption></figure><figure><img alt="Sharon Rose performing live" src="live-stage.jpg"/><figcaption>On stage</figcaption></figure></div><div style="margin-top:30px;padding:28px;border:1px solid #d9d2c7;background:#fffefa;max-width:850px"><div class="kicker">Behind the music · Blueprints Studio</div><h3 style="margin:12px 0">In the Recording Studio</h3><p>Explore authentic behind-the-scenes photographs from the making of Sharon Rose’s next album, produced by Jean-Paul De Roover. Coming fall 2027.</p><a class="cta" style="border-color:#28575d;color:#225159" href="studio-2026-2027.html">View the Recording Studio Gallery</a></div></section>
+<script>
+(function () {
+  const events = [
+    {
+      date: "2026-11-22",
+      title: "Red Lion Holiday Craft Revival",
+      details: "Sharon Rose live performance",
+      time: "2:30–3:15 PM"
+    },
+    {
+      date: "2026-12-06",
+      title: "The Sounds of Christmas",
+      details: "Community Christmas Concert — St. Andrew's Presbyterian Church, 207 S. Brodie Street, Thunder Bay",
+      time: "4:00 PM · Tickets $25",
+      tickets: "https://st-andrews-presbyterian-church-105232.square.site/"
+    },
+    {
+      date: "2026-12-30",
+      title: "Sharon Rose at Bean & Olive",
+      details: "Acoustic Covers & Originals — 1725 Highway 61, Thunder Bay",
+      time: "8:00–10:00 PM"
+    }
+  ];
+
+  const today = new Date();
+  const todayString = [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, "0"),
+    String(today.getDate()).padStart(2, "0")
+  ].join("-");
+
+  function displayEvent(event) {
+    const date = new Date(event.date + "T12:00:00");
+    const label = date.toLocaleDateString("en-CA", {
+      month: "long", day: "numeric", year: "numeric"
+    });
+
+    return `<article style="padding:22px 0;border-bottom:1px solid #738b8d">
+      <h3 style="margin:0 0 8px">${event.title}</h3>
+      <p style="margin:5px 0"><strong>${label}</strong></p>
+      <p style="margin:5px 0">${event.details}</p>
+      <p style="margin:5px 0">${event.time}</p>
+      ${event.tickets ? `<p><a href="${event.tickets}" target="_blank" rel="noopener noreferrer" style="color:#f4dbb9;text-decoration:underline">Buy Tickets</a></p>` : ""}
+    </article>`;
+  }
+
+  const upcoming = events.filter(e => e.date >= todayString);
+  const past = events.filter(e => e.date < todayString).reverse();
+  const section = document.getElementById("performances");
+
+  if (section) {
+    section.innerHTML = `
+      <div style="max-width:900px;margin:auto;padding:45px 24px;color:white">
+        <h2>Upcoming Performances</h2>
+        ${upcoming.length ? upcoming.map(displayEvent).join("") : "<p>New performances will be announced soon.</p>"}
+        <h2 style="margin-top:50px">Past Performances</h2>
+        ${past.length ? past.map(displayEvent).join("") : "<p>Past performances will appear here.</p>"}
+      </div>`;
+  }
+})();
+</script><section id="photos"><div class="kicker">Through the lens</div><h2>Photos &amp; Performances</h2><div class="gallery"><figure><img alt="Sharon Rose formal teal portrait" src="portrait.jpg"/><figcaption>Artist portrait</figcaption></figure><figure><img alt="Sharon Rose performing on acoustic guitar" src="live-guitar.jpg"/><figcaption>Live guitar</figcaption></figure><figure><img alt="Sharon Rose at the piano" src="live-piano.jpg"/><figcaption>At the piano</figcaption></figure><figure><img alt="Sharon Rose performing live" src="live-stage.jpg"/><figcaption>On stage</figcaption></figure></div><div style="margin-top:30px;padding:28px;border:1px solid #d9d2c7;background:#fffefa;max-width:850px"><div class="kicker">Behind the music · Blueprints Studio</div><h3 style="margin:12px 0">In the Recording Studio</h3><p>Explore authentic behind-the-scenes photographs from the making of Sharon Rose’s next album, produced by Jean-Paul De Roover. Coming fall 2027.</p><a class="cta" style="border-color:#28575d;color:#225159" href="studio-2026-2027.html">View the Recording Studio Gallery</a></div></section>
 <section class="album" id="new-album"><div class="kicker">Coming Fall 2027</div><h2>New Original Music · Fall 2027</h2><div class="album-card"><div class="album-art">SHARON<br/>ROSE<br/><span style="font:11px Arial,sans-serif;margin-top:15px">2027</span></div><div><h3>Second Album · Fall 2027</h3><p>Sharon Rose is preparing her second album of original music, produced by Jean-Paul De Roover at Blueprints Studio. The songs explore courage, self-acceptance, connection, and the pursuit of joy. The album title and release date will be announced when confirmed.</p><p class="muted small">Album title, cover art and exact release date have not yet been announced. The square graphic is a temporary placeholder, not album artwork.</p></div></div></section>
 <section class="joy-feature" id="joy-mantra"><div class="kicker">A song in the making</div><h2>Joy Mantra</h2><p class="lead">An uplifting invitation to call more joy, light, and love into everyday life — and to share that joy with others.</p><p>Sharon Rose’s song “Joy Mantra” invites people to raise their voices together. Fellow musicians will contribute their voices to the album in a future studio session. A behind-the-scenes performance video may be shared here later.</p><p class="muted small">This is a preview of a song in development, not a released recording.</p></section><section id="music"><div class="kicker">Recorded music</div><h2>Music &amp; Discography</h2><div class="grid2"><div class="tile"><small>THEN</small><h3>First Album · Early Recordings</h3><p>Recorded when Sharon Rose was 18, her first album marks the beginning of her recorded musical journey. Original artwork, track information, and listening options can be added here.</p></div><div class="tile"><small>NOW</small><h3>The Next Chapter</h3><p>Her second album is planned for fall 2027. This space will grow with new singles, videos and release information as they become available.</p></div></div></section>
 <section class="merch" id="shop"><div class="kicker">From Sharon Rose's shop</div><h2>Merchandise</h2><p class="lead">A storefront-style preview of your merchandise, with product photographs, prices and buttons connecting visitors to your store.</p><div class="shop-grid"><div class="product"><div class="product-placeholder">Merch photo</div><h3>Product One</h3><p>Photo, price and purchase link to be added.</p></div><div class="product"><div class="product-placeholder">Merch photo</div><h3>Product Two</h3><p>Photo, price and purchase link to be added.</p></div><div class="product"><div class="product-placeholder">Album artwork</div><h3>Music &amp; More</h3><p>Album and merchandise items can appear together.</p></div></div><p class="muted small">These are examples of the shop layout, not products currently available for purchase. We'll link them to Shopify when you provide your store address.</p></section>
